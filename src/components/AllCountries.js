@@ -81,26 +81,24 @@ const AllCountries = () => {
               setRegion(e.target.value);
             }}
           >
-            <optgroup className="">
-              <option className="p-2" value="">
-                Filter by Region
-              </option>
-              <option className="p-2" value="Africa">
-                Africa
-              </option>
-              <option className="p-2" value="America">
-                Americas
-              </option>
-              <option className="p-2" value="Asia">
-                Asia
-              </option>
-              <option className="p-2" value="Europe">
-                Europe
-              </option>
-              <option className="p-2" value="Oceania">
-                Oceania
-              </option>
-            </optgroup>
+            <option className="p-2" value="">
+              Filter by Region
+            </option>
+            <option className="p-2" value="Africa">
+              Africa
+            </option>
+            <option className="p-2" value="America">
+              Americas
+            </option>
+            <option className="p-2" value="Asia">
+              Asia
+            </option>
+            <option className="p-2" value="Europe">
+              Europe
+            </option>
+            <option className="p-2" value="Oceania">
+              Oceania
+            </option>
           </select>
         </div>
       </div>
