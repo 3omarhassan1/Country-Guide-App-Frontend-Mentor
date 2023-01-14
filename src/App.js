@@ -127,7 +127,7 @@ function App() {
                 document.querySelector(".theme").className = "fas fa-sun theme";
               }
             }}
-            className="mode d-flex gap-2 align-items-center theme-cont"
+            className="mode d-flex gap-2 align-items-center theme-cont br bg shad p-2"
           >
             <i className="fas fa-moon theme"></i>
             <span className="themetxt">Light Mode</span>
