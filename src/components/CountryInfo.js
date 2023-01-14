@@ -29,6 +29,10 @@ const CountryInfo = () => {
       console.log(count);
       console.log(Object.keys(count.coatOfArms).length);
 
+      if (count.name.common === "Palestine") {
+        count.capital = ["Al-Quds"];
+      }
+
       setCur(Object.values(data[0].currencies)[0]);
       setName(Object.values(data[0].name.nativeName)[0]);
       setLang(data[0].languages);

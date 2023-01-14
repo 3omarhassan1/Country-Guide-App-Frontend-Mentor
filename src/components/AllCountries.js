@@ -14,22 +14,47 @@ const AllCountries = () => {
       let res = "";
       let data = [];
       if (input && region) {
-        res = await fetch(`${api}/name/${input}`);
-        data = await res.json();
-        if (data && data.constructor === Array) {
-          data = data.filter(
-            (count) => count.region === region && count.name.common !== "Israel"
+        if (input === "Israel") {
+          throw new Error(
+            "There is no country with this name. Do you mean Palestine?"
           );
         }
+        res = await fetch(`${api}/name/${input}`);
         if (!res.ok) throw new Error("There is no country with this name.");
+        data = await res.json();
+        if (data && data.constructor === Array && data.length > 1) {
+          data = data.filter((count) => count.region === region);
+          if (data.length > 1) {
+            data = data.filter((count) => count.name.common === "Israel");
+          }
+          if (data.length === 1) {
+            if (data[0].name.common === "Israel") {
+              throw new Error("Do you mean Palestine?");
+            }
+          }
+        }
         if (data.length === 0)
           throw new Error("There is no country with this name in this region.");
       }
       if (input && !region) {
+        if (input === "Israel" || input === "israel") {
+          throw new Error(
+            "There is no country with this name. Do you mean Palestine?"
+          );
+        }
         res = await fetch(`${api}/name/${input}`);
         if (!res.ok) throw new Error("There is no country with this name.");
         data = await res.json();
-        data = data.filter((count) => count.name.common !== "Israel");
+        console.log(data);
+        if (data && data.constructor === Array && data.length > 1) {
+          data = data.filter((count) => count.name.common !== "Israel");
+        }
+        if (data.length === 1) {
+          if (data[0].name.common === "Israel") {
+            throw new Error("Do you mean Palestine?");
+          }
+        }
+        // data = data.filter((count) => count.name.common !== "Israel");
       }
       if (!input && region) {
         const res = await fetch(`${api}/region/${region}`);
@@ -43,6 +68,13 @@ const AllCountries = () => {
         data = await res.json();
         data = data.filter((count) => count.name.common !== "Israel");
       }
+
+      data.forEach((count) => {
+        if (count.name.common === "Palestine") {
+          count.capital = ["Al-Quds"];
+        }
+      });
+
       setCountries(data);
       console.log(data);
       setIsLoading(false);
@@ -63,7 +95,7 @@ const AllCountries = () => {
     <div className="AllCountries">
       <div className="bar pt-4 pb-4">
         <div className="container d-flex justify-content-between flex-wrap gap-4">
-          <form className="col-md-6 col-sm-12 d-flex">
+          <div className="col-md-6 col-sm-12 d-flex form">
             <input
               type="text"
               className="bg2 br p-3 ps-5 w-100 shad"
@@ -73,7 +105,7 @@ const AllCountries = () => {
                 setInput(e.target.value);
               }}
             />
-          </form>
+          </div>
           <select
             className="bg2 text br p-3  shad"
             name="cont"

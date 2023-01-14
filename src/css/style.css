@@ -265,11 +265,11 @@ input::placeholder {
   color: var(--text2);
 }
 
-form {
+.form {
   position: relative;
 }
 
-form::before {
+.form::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f002";
