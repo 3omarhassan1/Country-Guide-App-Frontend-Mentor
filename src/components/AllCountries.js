@@ -55,6 +55,7 @@ const AllCountries = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getCountries();
   }, [input, region]);
 

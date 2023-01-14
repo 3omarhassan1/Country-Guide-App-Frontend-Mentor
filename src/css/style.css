@@ -203,7 +203,7 @@ button:hover {
 
 .face .logo-bg {
   z-index: 1;
-  animation: logo 1.5s cubic-bezier(1, 0.00, 1, 1) 0s forwards;
+  animation: logo 0.5s linear 1s forwards;
   transform: translate(-50%, -50%);
   position: fixed;
   height: 100vh;
