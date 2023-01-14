@@ -62,7 +62,7 @@ const CountryInfo = () => {
         {isLoading && !error && <h4 className="mt-4">Loading...</h4>}
         {!isLoading && error && <h4 className="mt-4">{error}</h4>}
         {country?.map((count, index) => (
-          <div className="cont mt-5 d-flex flex-column flex-lg-row align-items-md-start gap-5">
+          <div className="cont mt-5 d-flex flex-column flex-lg-row align-items-md-start gap-4 gap-lg-5">
             <div className="visual d-flex flex-column align-items-sm-stretch gap-4">
               <img
                 src={count.flags.svg}
@@ -80,7 +80,7 @@ const CountryInfo = () => {
               </button>
             </div>
             <div className="info ps-2 p-md-0 flex-grow-1">
-              <h1 className="fw-bold mb-4">{count.name.common}</h1>
+              <h1 className="fw-bold mb-4 mt-0">{count.name.common}</h1>
               <div
                 style={{
                   gap: "4rem",
