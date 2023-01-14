@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Country-Guide-App-Frontend-Mentor/static/css/main.3face758.css",
-    "main.js": "/Country-Guide-App-Frontend-Mentor/static/js/main.d06ebd22.js",
+    "main.css": "/Country-Guide-App-Frontend-Mentor/static/css/main.2e4f0929.css",
+    "main.js": "/Country-Guide-App-Frontend-Mentor/static/js/main.1384dc16.js",
     "static/media/fa-solid-900.ttf": "/Country-Guide-App-Frontend-Mentor/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
     "static/media/fa-brands-400.ttf": "/Country-Guide-App-Frontend-Mentor/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
     "static/media/fa-solid-900.woff2": "/Country-Guide-App-Frontend-Mentor/static/media/fa-solid-900.64d495f582d4a1590a6c.woff2",
@@ -11,11 +11,11 @@
     "static/media/fa-v4compatibility.ttf": "/Country-Guide-App-Frontend-Mentor/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
     "static/media/fa-v4compatibility.woff2": "/Country-Guide-App-Frontend-Mentor/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
     "index.html": "/Country-Guide-App-Frontend-Mentor/index.html",
-    "main.3face758.css.map": "/Country-Guide-App-Frontend-Mentor/static/css/main.3face758.css.map",
-    "main.d06ebd22.js.map": "/Country-Guide-App-Frontend-Mentor/static/js/main.d06ebd22.js.map"
+    "main.2e4f0929.css.map": "/Country-Guide-App-Frontend-Mentor/static/css/main.2e4f0929.css.map",
+    "main.1384dc16.js.map": "/Country-Guide-App-Frontend-Mentor/static/js/main.1384dc16.js.map"
   },
   "entrypoints": [
-    "static/css/main.3face758.css",
-    "static/js/main.d06ebd22.js"
+    "static/css/main.2e4f0929.css",
+    "static/js/main.1384dc16.js"
   ]
 }
