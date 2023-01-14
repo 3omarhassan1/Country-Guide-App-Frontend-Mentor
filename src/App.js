@@ -107,7 +107,7 @@ function App() {
           <span>developments</span>
         </div>
       </div>
-      <header className="pt-4 pb-4 bg2 shad ">
+      <header className="pt-3 pb-3 bg2 shad ">
         <div className="container my-flex gap-2 justify-content-between">
           <Link className="d-flex gap-2 align-items-center" to="/">
             <i className="fas fa-home bg p-2 scale br shad"></i>
