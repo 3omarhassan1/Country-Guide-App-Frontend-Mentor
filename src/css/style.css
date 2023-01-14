@@ -1,0 +1,377 @@
+/* start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  overflow-anchor: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bgcolor2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--logo);
+  opacity: 0.7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text2);
+  width: 50px;
+  opacity: 1;
+}
+
+:root {
+  --maincolor: hsl(150, 100%, 66%);
+  --text-color: #fff;
+  --bgcolor: hsl(207, 26%, 17%);
+  --bgcolor2: hsl(209, 23%, 22%);
+  --up: hsl(209, 23%, 28%);
+  --logo: hsl(207, 26%, 20%);
+  --text2: hsl(0, 0%, 100%);
+  --rad: 6px;
+  --seccolor: rgb(188 213 255);
+}
+
+.light {
+  --up: hsl(207, 30%, 93%);
+  --seccolor: rgb(10, 45, 107);
+  --logo: hsl(207, 30%, 93%);
+  --text2: hsl(0, 0%, 52%);
+  --bgcolor: hsl(0, 0%, 98%);
+  --bgcolor2: var(--bgcolor);
+  --text-color: hsl(200, 15%, 8%);
+}
+
+body {
+  font-family: 'Nunito Sans',
+    sans-serif;
+  color: var(--text-color);
+  min-height: 100vh;
+  background-color: var(--bgcolor);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  color: var(--text-color);
+  padding: 0;
+  background-color: transparent;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  padding: 0 1rem !important;
+}
+
+
+/* end global rules */
+
+/* start my framework */
+
+.scale:hover {
+  transform: scale(1.05);
+}
+
+.mob {
+  display: none;
+}
+
+.shad {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+}
+
+.my-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill-text {
+  fill: var(--text-color);
+}
+
+.fill-sec {
+  fill: var(--seccolor);
+}
+
+.fill-logo {
+  fill: var(--logo);
+}
+
+.text {
+  color: var(--text-color);
+}
+
+.bg {
+  background-color: var(--bgcolor);
+}
+
+.bg2 {
+  background-color: var(--bgcolor2);
+}
+
+.br {
+  border-radius: var(--rad);
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.point {
+  cursor: pointer;
+}
+
+/* end my framework */
+.App {
+  min-height: 100vh;
+}
+
+.up {
+  z-index: 2;
+  position: fixed;
+  bottom: -60px;
+  right: 1rem;
+  background-color: var(--up);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.logo-bg {
+  position: fixed;
+  top: calc(50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: -1;
+  height: 100vh;
+}
+
+.face {
+  position: relative;
+}
+
+.face .logo-bg {
+  z-index: 1;
+  animation: logo 1.5s cubic-bezier(1, 0.00, 1, 1) 0s forwards;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  height: 100vh;
+  background-color: var(--bgcolor);
+  transition: 0s;
+}
+
+.logo-bg .svg-cont {
+  width: 200px;
+}
+
+.logo-bg {
+  width: 100%;
+}
+
+.logo-bg .text {
+  color: var(--logo);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "OpenSans-Light",
+    "Open Sans";
+  letter-spacing: 2.3px;
+  transition: 0s;
+}
+
+.face .logo-bg .text {
+  color: var(--seccolor);
+}
+
+.logo-bg .text span {
+  transition: 0s;
+  letter-spacing: 0;
+}
+
+#root {
+  padding-bottom: 4rem;
+  min-height: 100vh;
+}
+
+.mode {
+  cursor: pointer;
+}
+
+.count-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+
+.bar input {
+  border: none;
+  color: var(--text2);
+  outline: none;
+  align-self: stretch;
+}
+
+input::placeholder {
+  color: var(--text2);
+}
+
+form {
+  position: relative;
+}
+
+form::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  transform: translateY(-50%);
+}
+
+.bar select {
+  outline: none;
+  border: none;
+  align-self: stretch;
+}
+
+.bar select option {
+  cursor: pointer;
+}
+
+.AllCountries .content .container.counts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 50px;
+}
+
+.AllCountries img {
+  width: 100%;
+  flex: 1;
+}
+
+
+.CountryInfo .cont {
+  margin-top: 20px;
+}
+
+.borders button {
+  cursor: default;
+}
+
+.visual {
+  flex-basis: 40%;
+  align-self: stretch;
+}
+
+.CountryInfo .info {
+  flex-basis: 60%;
+}
+
+.data1,
+.data2 {
+  flex-basis: 50%;
+}
+
+.attribution {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: var(--up);
+  width: 100%;
+  text-align: center;
+  color: var(--text-color);
+  padding: .4em;
+  margin-top: auto;
+}
+
+.attribution a {
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: rgb(84, 166, 233);
+}
+
+@media (max-width:767px) {
+  .mob {
+    display: block;
+  }
+
+  .desk {
+    display: none;
+  }
+
+  .bar .container {
+    flex-direction: column;
+  }
+
+  .data {
+    gap: 0.5rem !important;
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
