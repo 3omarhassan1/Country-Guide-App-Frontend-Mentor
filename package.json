@@ -2,7 +2,7 @@
   "name": "countries-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://3omarhassan1.github.io/Country-Guide-App-Frontend-Mentor/",
+  "homepage": "httpgi://3omarhassan1.github.io/Country-Guide-App-Frontend-Mentor/",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.5",
