@@ -23,16 +23,17 @@ function App() {
     });
 
     window.onscroll = () => {
+      const endScroll = document.body.offsetHeight - window.innerHeight;
       if (
-        window.scrollY > 500 &&
-        window.scrollY < document.body.offsetHeight - 890
+        window.scrollY > window.innerHeight &&
+        window.scrollY < endScroll - 46
       ) {
         document.querySelector(".up").style.bottom = "10px";
       }
-      if (window.scrollY > document.body.offsetHeight - 890) {
+      if (window.scrollY > endScroll - 46) {
         document.querySelector(".up").style.bottom = "70px";
       }
-      if (window.scrollY < 500) {
+      if (window.scrollY < window.innerHeight) {
         document.querySelector(".up").style.bottom = "-70px";
       }
     };

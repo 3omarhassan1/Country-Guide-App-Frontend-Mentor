@@ -86,12 +86,21 @@ const CountryInfo = () => {
                 <div className="data1 d-flex flex-column gap-2">
                   <div className="box">
                     <p style={{}} className="fw-normal text-capitalize">
+                      official name:
+                      <span className="fw-bold d-block mt-2 fs-5">
+                        {count.name.official}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="box">
+                    <p style={{}} className="fw-normal text-capitalize">
                       native name:
                       <span className="fw-bold d-block mt-2 fs-5">
                         {name.official}
                       </span>
                     </p>
                   </div>
+
                   <div className="box">
                     <p className="fw-normal text-capitalize">
                       {count.capital && count.capital.length > 1
@@ -207,7 +216,7 @@ const CountryInfo = () => {
                         {Object.keys(count.coatOfArms).length > 0 ? (
                           <img
                             style={{
-                              marginTop:"1.5rem"
+                              marginTop: "1.5rem",
                             }}
                             width={150}
                             src={count.coatOfArms.svg}
