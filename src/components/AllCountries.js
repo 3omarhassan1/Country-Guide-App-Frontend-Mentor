@@ -22,21 +22,22 @@ const AllCountries = () => {
         res = await fetch(`${api}/name/${input}`);
         if (!res.ok) throw new Error("There is no country with this name.");
         data = await res.json();
-        if (data && data.constructor === Array && data.length > 1) {
-          data = data.filter((count) => count.region === region);
-          if (data.length > 1) {
-            data = data.filter((count) => count.name.common === "Israel");
-          }
-          if (data.length === 1) {
-            if (data[0].name.common === "Israel") {
-              throw new Error("Do you mean Palestine?");
-            }
+        data = data.filter((count) => count.region === region);
+        if (data.length > 1) {
+          data = data.filter((count) => count.name.common !== "Israel");
+        }
+        if (data.length === 1) {
+          if (data[0].name.common === "Israel") {
+            throw new Error(
+              "There is no country with this name. Do you mean Palestine?"
+            );
           }
         }
         if (data.length === 0)
           throw new Error("There is no country with this name in this region.");
       }
       if (input && !region) {
+        console.log("yyyyy");
         if (input === "Israel" || input === "israel") {
           throw new Error(
             "There is no country with this name. Do you mean Palestine?"
@@ -45,7 +46,6 @@ const AllCountries = () => {
         res = await fetch(`${api}/name/${input}`);
         if (!res.ok) throw new Error("There is no country with this name.");
         data = await res.json();
-        console.log(data);
         if (data && data.constructor === Array && data.length > 1) {
           data = data.filter((count) => count.name.common !== "Israel");
         }
@@ -120,7 +120,7 @@ const AllCountries = () => {
             <option className="p-2" value="Africa">
               Africa
             </option>
-            <option className="p-2" value="America">
+            <option className="p-2" value="Americas">
               Americas
             </option>
             <option className="p-2" value="Asia">
