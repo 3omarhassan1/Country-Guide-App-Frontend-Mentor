@@ -11,8 +11,12 @@ if (window.localStorage.getItem("theme") === "light") {
   document.body.classList.add("light");
 }
 
+
 function App() {
   useEffect(() => {
+    window.onresize = () =>{
+      console.log(window.innerWidth/document.body.offsetHeight)
+    }
     window.scrollTo(0, 0);
 
     document.querySelector(".up").addEventListener("click", () => {
